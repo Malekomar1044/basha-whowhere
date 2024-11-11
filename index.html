@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basha WhoWhere</title>
+    <style>
+        body {
+            background: linear-gradient(177deg, rgba(17, 22, 32, 1) 24%, rgba(38, 55, 89, 1) 82%);
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .kullanicilar-container {
+            width: 90%;
+            max-width: 600px;
+            padding: 15px;
+            background: rgba(17, 22, 32, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .basha_logo {
+            font-size: 24px;
+            text-align: center;
+            background: linear-gradient(to right, hsl(320.6, 100%, 56.1%), hsl(204, 100%, 59%));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }.arama-alani {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .search-input {
+            flex-grow: 1;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            margin-right: 10px;
+        }
+        #yenile {
+            padding: 10px;
+            background-color: #2551a2;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+        }
+        .basha_filter {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 15px;
+        }
+        .basha_filter label {
+            cursor: pointer;
+        }
+        .kullanicilar {
+            display: flex;
+            flex-direction:column;
+            gap: 10px;
+        }
+        .oyuncu {
+            display: flex;
+            align-items: center;
+            background-color: #19233491;
+            border-radius: 8px;
+            padding: 10px;
+            transition: 0.3s;
+        }
+        .oyuncu img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .oyuncu-text {
+            flex-grow: 1;
+        }
+        .oyuncu b {
+            font-size: 18px;
+            display: block;
+        }
+        .oyuncu i {
+            font-size: 12px;
+            display: block;
+            color: #ccc;
+        }
+        .linkler a {
+            color: #24ccff;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kullanicilar-container">
+    <h1 class="basha_logo">Basha WhoWhere - Online: <span id="online"><b>0</b></span></h1>
+    <div class="arama-alani">
+        <input type="text" id="searchInput" placeholder="ابحث عن لاعب"class="search-input">
+        <button id="yenile">تحديث</button>
+    </div>
+    <div class="basha_filter">
+        <label><input type="checkbox" id="fotografli"> مع صورة</label>
+        <label><input type="checkbox" id="fotografsiz"> بدون صورة</label>
+        <label><input type="checkbox" id="userlar"> إخفاء User</label>
+        <label><input type="checkbox" id="favoriler"> المفضلة</label>
+    </div>
+    <div class="kullanicilar">
+        <!-- سيتم هنا عرض اللاعبين عبر السكربت -->
+        <div class="oyuncu">
+            <img src="https://gartic.io/static/images/avatar/svg/1.svg" alt="Avatar">
+            <div class="oyuncu-text">
+                <b>Player Name</b>
+                <i>ID: 12345</i>
+                <span>الغرفة: Example Room</span>
+            </div>
+            <div class="linkler">
+                <a href="#" target="_blank">أدخل الغرفة</a>
+                <a href="#" target="_blank">مشاهدة</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
